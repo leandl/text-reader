@@ -8,7 +8,7 @@ function speech(text: string, voice: SpeechSynthesisVoice): Promise<void> {
   window.speechSynthesis.speak(ut);
 
   return new Promise((resolve) => {
-    let setintervalId: NodeJS.Timer | undefined;
+    let setintervalId: any | undefined;
 
     function whileSpeaking() {
       if (!setintervalId) {
